@@ -1,6 +1,12 @@
 # Tutorial: Criando um Currículo Online com HTML, CSS, SEO e Publicação no GitHub Pages
 
+Este tutorial ensina como criar um currículo online responsivo e acessível usando HTML, CSS, boas práticas de SEO e publicá-lo no GitHub Pages. Vamos passo a passo, desde a estrutura básica do HTML até a publicação final.
+
 ---
+
+## Wireframe do Currículo Online
+
+![Wireframe do Currículo Online](wireframe.png)
 
 ## Passo 1 – Estrutura Básica do HTML
 
