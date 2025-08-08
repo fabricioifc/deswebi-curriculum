@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fabricio Bizotto — Currículo</title>
+    <meta name="description"
+        content="Currículo de Fabricio Bizotto — Desenvolvedor(a) Front-end. Contato, habilidades, experiência e projetos.">
+    <meta name="author" content="Fabricio Bizotto">
+
+    <!-- Open Graph é usado para melhorar o compartilhamento em redes sociais -->
+    <meta property="og:title" content="Fabricio Bizotto - Currículo Online" />
+    <meta property="og:description"
+        content="Currículo profissional de Desenvolvedor Front-end, com experiência, habilidades e projetos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fabricioifc.github.io/seurepositorio/" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/28762356?v=4&size=64" />
+    <!-- Robots é usado para que motores de busca indexem a página -->
+    <meta property="robots" content="index, follow" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+    <style>
+        :root {
+            --bg: #f6f8fb;
+            --card: #ffffff;
+            --muted: #6b7280;
+            --accent: #0ea5a4;
+            --accent-2: #0b7285;
+            --text: #0f172a;
+            --gap: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.4;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background: var(--card);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, var(--accent), var(--accent-2));
+            color: white;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+        }
+
+        .photo {
+            width: 96px;
+            height: 96px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .role {
+            opacity: 0.9;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .contact a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: rgba(255, 255, 255, 0.95);
+            text-decoration: none;
+        }
+
+        .contact .social {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 1.25rem;
+            justify-content: center;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .pill {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.25rem 0.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 1.25rem;
+        }
+
+        .section h2 {
+            font-size: 1rem;
+            margin: 0 0 0.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill {
+            flex: 1 1 120px;
+            background: #f3f6f8;
+            padding: 0.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .progress {
+            height: 8px;
+            background: #e6eef0;
+            border-radius: 999px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+
+        .progress>span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        }
+
+        .job {
+            border-left: 3px solid var(--accent);
+            padding: 0.6rem 0 0.6rem 0.8rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .job time {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .job p {
+            margin: 0.35rem 0 0;
+            color: var(--muted);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .project {
+            background: #fbfdff;
+            border: 1px solid #eef4f6;
+            padding: 0.75rem;
+            border-radius: 8px;
+        }
+
+        footer {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem;
+            }
+
+            .sidebar>div {
+                width: 100%;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 0.5rem;
+            }
+
+            .sidebar {
+                padding: 1rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .skills {
+                flex-direction: column;
+            }
+
+            .skill {
+                flex: 1 1 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" role="document">
+
+        <aside class="sidebar" aria-label="Informações do candidato">
+            <div style="display:flex;gap:1rem;align-items:center">
+                <div class="photo" aria-hidden="true">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Foto do candidato">
+                </div>
+                <div>
+                    <div class="title">Fabricio Bizotto</div>
+                    <div class="role">Desenvolvedor Front‑end Júnior</div>
+                </div>
+            </div>
+
+            <div class="contact" aria-label="Contatos">
+                <div class="pill">📍 Videira, SC</div>
+                <div style="margin-top:0.5rem">
+                    <div><strong>Email:</strong> <a href="mailto:seu.email@exemplo.com">fabricio.bizotto@ifc.edu.br</a>
+                    </div>
+                    <div><strong>Tel:</strong> <a href="tel:+5511999999999">+55 49 99999-9999</a></div>
+
+                    <div class="social">
+                        <a href="github.com/fabricioifc" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/fabricio-bizotto-0aa27131/" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Habilidades</h3>
+                <div class="skills">
+                    <div class="skill">HTML <div class="progress" aria-hidden><span style="width:95%"></span></div>
+                    </div>
+                    <div class="skill">CSS <div class="progress" aria-hidden><span style="width:90%"></span></div>
+                    </div>
+                    <div class="skill">JavaScript <div class="progress" aria-hidden><span style="width:75%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:auto">
+                <h3>Idiomas</h3>
+                <div class="muted">Português (Nativo)</div>
+                <div class="muted">Inglês</div>
+            </div>
+
+        </aside>
+
+        <main>
+
+            <section class="section" aria-labelledby="summary-title">
+                <h2 id="summary-title">Resumo</h2>
+                <div class="summary">
+                    Desenvolvedor front‑end focado em construir interfaces acessíveis e responsivas. Experiência em HTML
+                    semântico, CSS moderno (Flexbox, Grid) e JavaScript. Procuro oportunidade para aplicar boas práticas
+                    de qualidade de código e colaborar em times ágeis.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 id="experience-title">Experiência</h2>
+
+                <article class="job">
+                    <h3 id="job1">Desenvolvedor Front‑end — Empresa XYZ</h3>
+                    <time datetime="2023-04">Abr 2023 — Presente</time>
+                    <p>Desenvolvimento de componentes reutilizáveis em React, implementação de layouts responsivos,
+                        otimização de performance e colaboração com designers para melhorar a usabilidade.</p>
+                </article>
+
+            </section>
+
+            <section class="section">
+                <h2 id="projects-title">Projetos Selecionados</h2>
+                <div class="projects">
+                    <div class="project">
+                        <strong>App de Tarefas (React)</strong>
+                        <div class="muted">Lista de tarefas com filtro, persistência local e testes unitários.</div>
+                    </div>
+                    <div class="project">
+                        <strong>Landing Page Responsiva</strong>
+                        <div class="muted">Layout acessível, performance otimizada e SEO básico.</div>
+                    </div>
+                    <div class="project">
+                        <strong>Portfólio Pessoal</strong>
+                        <div class="muted">Site estático com rota por hash e galeria de imagens.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 id="education-title">Formação</h2>
+                <div>
+                    <strong>Técnico em Informática — Instituto Federal Catarinense</strong>
+                    <div class="muted">2019 — 2021</div>
+                </div>
+            </section>
+
+            <footer>
+                <div>Disponível para trabalho remoto e presencial.</div>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
