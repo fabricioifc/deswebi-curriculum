@@ -139,6 +139,13 @@ CSS para o container e sidebar:
   flex-direction: column;
   gap: var(--gap);
 }
+
+.sidebar>div:first-child {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: var(--gap);
+}
 ```
 
 ---
@@ -148,7 +155,7 @@ CSS para o container e sidebar:
 Exemplo de foto com estilo e contatos com links:
 
 ```html
-<div style="display:flex; gap:1rem; align-items:center;">
+<div>
   <div class="photo" aria-hidden="true">
     <img src="URL_DA_FOTO" alt="Foto do candidato">
   </div>
